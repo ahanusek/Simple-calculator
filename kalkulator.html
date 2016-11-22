@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Moja Strona</title>
+        <!--  START podpiecie pluginów -->
+            <!-- START Podpięcie jquery -->
+            <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+            <!-- Latest compiled and minified JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+            <!-- START Podpięcie font awesome -->
+            <link rel="stylesheet" href="kalkulator/plugins/font-awesome/css/font-awesome.min.css">
+            <!-- END Podpięcie font awesome -->
+            <!-- START Podpięcie moje js -->
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+
+            <!-- Compiled and minified JavaScript -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+            <script type="text/javascript" src="kalkulator/js/main.js"></script>
+            <!-- END Podpięcie moje js -->
+            <!-- START Podpięcie moje css -->
+            <link rel="stylesheet" href="kalkulator/css/style.css">
+            <!-- END Podpięcie moje css -->
+    
+    
+    `
+        <!-- End, podpięcie pluginów -->
+    </head>   
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 m-t-30">
+                    <div class="header"><img src="kalkulator/img/nagel.jpg"></div>
+                </div>
+            </div>   
+            <div class="formularz row">
+                <div class="color col-md-6">
+                             <div class="input-field m-t-30">
+                              <input placeholder="Wpisz ilość miejsc paletowych" id="volumePallets" type="text" >
+                              <label for="volumePallets">Ilość palet do odbiorcy</label>
+                            </div>
+                            <div class="input-field">
+                                <p>
+                                  <input type="checkbox" class="filled-in" id="filled-in-box"  />
+                                  <label for="filled-in-box">Czy dostawa dotyczy tzw. kluczowego odbiorcy</label>
+                                </p>
+                            </div>
+                             <div class="input-field m-t-30">
+                                <div class="option">Odległość odbiorcy od oddziału go obsługującego</div>
+                                 <select id="selectOption">
+                                  <option value="" disabled selected>Wybierz opcje (odległości wyrażone w km)</option>
+                                  <option value="1"> do 50 </option>
+                                  <option value="2"> 50 - 100</option>
+                                  <option value="3"> 100 - 200</option>
+                                  <option value="4"> powyżej 200</option>
+                                </select>
+                                
+                              </div>
+                              
+                             <div class="input-field m-t-50">
+                              <input placeholder="Wpisz fracht bez jednostki waluty" id="directCost" type="text" >
+                              <label for="directCost">Koszt trasy bezpośredniej (w PLN)</label>
+                            </div>
+                            <div class="input-field m-t-30">
+                              <input placeholder="Pole opcjonalne" id="extraPallets" type="text" >
+                              <label for="extraPallets">Ilość pozostałych palet na trasie bezpośredniej</label>
+                            </div>
+                             <div class="buttonik">
+                                <div class="col-md-12"><a class="waves-effect waves-light btn">Policz!</a></div>
+                            </div>    
+                              
+                </div>
+                 <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-content white-text">
+                          <span class="card-title">
+                              <i class="fa fa-usd" aria-hidden="true"></i>
+                                Koszt dostawy przez oddział Nagel Polska:</span>
+                          <p>Na ostateczny koszt dostawy składa się:
+                              <ul>
+                                  <li id="rrv"></li>
+                                  <li id="depot"></li>
+                              </ul>
+                          </p>
+                          <p>Łączny koszt transportu to:<span id="resultDepot" class="colDist"></span> </p>
+                          <p>Średni koszt per paleta to:<span id="averageDepot" class="colDist"></span> </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content white-text">
+                          <span class="card-title">
+                              <i class="fa fa-usd" aria-hidden="true"></i>
+                                Koszt dostawy bezpośredniej (direct):</span>
+                          <p>Ostateczny koszt dostawy to:
+                              <ul>
+                                  <li id="allCost"></li>
+                                  <li id="averageDirect"></li>
+                              </ul>
+                          </p>
+                          
+                        </div>
+                    </div>
+                </div>
+               
+            
+            
+        
+
+        </div>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>    
+</html>
